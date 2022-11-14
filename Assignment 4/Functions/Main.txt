@@ -1,0 +1,55 @@
+#Main function
+def main():
+
+        print('Larry\'s Loans')
+        print()
+        print()
+
+        #Request inputs from user
+        Principle = float(input('Enter the principle amount of the loan:'))
+        Credit_Rating = input('Enter the client credit rating (a-e):')
+                
+        #if Credit_Rating.lower() == 'a':
+         #       break
+        #elif Credit_Rating.lower() == 'b':
+        #        break
+        #elif Credit_Rating.lower() == 'c':
+        #        break
+        #elif Credit_Rating.lower() == 'd':
+        #        break
+        #elif Credit_Rating.lower() == 'e':
+        #        break
+        #else:
+        #   print('Incorrect input. Enter the client credit rating (a-e):')
+
+
+        Years = int(input('Enter the number of years for the loan'))
+        Payment_Freq = input('Select \'m\' for monthly payments -or- \'b\' for bi-weekly payments')
+
+        if Payment_Freq != 'm' or Payment_Freq != 'b':
+           print('Incorrect input. Select \'m\' for monthly payments -or- \'b\' for bi-weekly payments') 
+
+        print() 
+
+        #Call interest rate function
+        Int_rate = interest_rate(Credit_Rating)
+                        
+        print()
+  
+        #Display Loan Payment
+        Loan_Payment = float(loan_payment(Principle, Years, Payment_Freq, Int_rate))
+        print('The loan payments will be $', format(Loan_Payment, ',.2f'))
+        
+        #Display Payment Schedule
+        payment_schedule(Principle, Int_rate, Loan_Payment)
+        
+
+        #display end of program
+        print()
+        print('End of program')    
+        
+#Call the main
+main()
+
+
+

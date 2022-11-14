@@ -1,0 +1,46 @@
+#Payment Schedule Function
+def payment_schedule(Principle, period_rate, payment):
+
+        line = chr(124) #vertical line
+
+        #Set variables to baseline
+        Payment_Number = 0
+        balance = Principle
+        period_interest = 0
+        initpayment = 0 
+        new_balance = Principle
+        total_interest = 0
+
+        #Display payment schedule
+        print()
+        print('---------------------------------------- Payment Schedule ---------------------------------------')
+        print('=================================================================================================')
+        print(line, 'Payment #:', line, 'Current Balance:', line, 'Period Interest:', line, 'Payment: ', line, 'Balance: ', line)
+        print('=================================================================================================')
+        print(line, Payment_Number,  line, '$', format(balance, ',.2f'), line, '$', format(period_interest, ',.2f'), line, '$', format(initpayment, ',.2f'), line, '$', format(new_balance, ',.2f'), line)
+        print('-------------------------------------------------------------------------------------------------')
+                
+        #Loop until balance = 0
+        while new_balance >= 0:
+
+                #increment payment number
+                Payment_Number += 1 
+                #reset balance to previous new balance
+                balance = new_balance
+                #calculate new balance after payment
+                new_balance = balance - payment
+                #calculate period interest
+                period_interest = float(payment - (payment / (1 + period_rate)))
+                #increment total interest
+                total_interest += period_interest
+
+                print(line, Payment_Number, line, '$', format(balance, ',.2f'), line, '$', format(period_interest, ',.2f'), line, '$', format(payment, ',.2f'), line, '$', format(new_balance, ',.2f'), line)
+                print('-------------------------------------------------------------------------------------------------')
+                #End loop
+                
+        
+
+        #Display total interest on the loan
+        print()
+        print()
+        print('Total interest on the loan is: $', format(total_interest, ',.2f'))

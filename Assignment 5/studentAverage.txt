@@ -1,0 +1,10 @@
+Student ID 	Student Name 		Grade Average 
+   1000		Sam Smith		83.4% 
+   2000		Sally Green		75.2% 
+   3000		Bill Murphy		88.0% (Hons.)
+   4000		Barb MacNeil		96.0% (Hons.)
+   5000		Carol Jones		65.0% 
+   6000		Tom Penny		85.2% (Hons.)
+   7000		Alice Yurel		77.0% 
+   8000		Jim Barrett		85.0% (Hons.)
+   9000		Ted Turner		87.8% (Hons.)

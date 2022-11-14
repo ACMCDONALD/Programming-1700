@@ -1,0 +1,23 @@
+#Interest rate calculation function
+def interest_rate(Credit_Rating):
+
+    #Take credit rating input and output interest rate
+        if Credit_Rating == 'a':
+            Int_rate = 0.035
+        elif Credit_Rating == 'b':
+            Int_rate = 0.04
+        elif Credit_Rating == 'c':
+            Int_rate = 0.065
+        elif Credit_Rating == 'd':
+            Int_rate = 0.08
+        elif Credit_Rating == 'e':
+            Int_rate = 0.1
+
+    #Calculate percent rate from interest rate
+        Pct_rate = Int_rate * 100
+
+    #Display Interest rate
+        print('Interest rate:', format(Pct_rate, ',.2f'), '%')
+
+        return Int_rate
+

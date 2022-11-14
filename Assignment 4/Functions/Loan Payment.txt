@@ -1,0 +1,22 @@
+#Loan payment calculation function
+def loan_payment(principle, years, freq, rate):
+
+    #Loan payment formula: A=P((r(1+r)^n) / ((1+r)^n -1))
+    #Where:
+    #A = payment amount per period
+    #P = initial principle (loan amount)
+    #r = interest rate per period
+    #n = total number of payments or periods
+
+    #calculate r and n
+    if freq == 'm': #monthly
+        rate_perperiod = float(rate/100) / 12
+        payments = float(12 * years)
+    elif freq == 'b': #bi-weekly
+        rate_perperiod = float(rate/100) / 26
+        payments = float(26 * years)
+    
+    #The formula in action
+    Loan_Payment = principle*((rate_perperiod*(1+rate_perperiod)**payments) / ((1+rate_perperiod)**payments -1))
+
+    return Loan_Payment
